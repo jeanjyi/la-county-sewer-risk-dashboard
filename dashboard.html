@@ -895,13 +895,17 @@
                 marker: {
                     colors: orderedColors
                 },
-                sort: false
+                sort: false,
+                textinfo: 'percent',
+                textposition: 'inside',
+                insidetextorientation: 'horizontal'
             }];
 
             Plotly.newPlot('chart-donut', donutData, {
                 height: getChartHeight(35, 350),
-                margin: { t: 20, b: 20, l: 40, r: 40 },
-                showlegend: true
+                margin: { t: 20, b: 40, l: 40, r: 40 },
+                showlegend: true,
+                legend: { orientation: 'h', y: -0.1 }
             }, {displayModeBar: false, responsive: true});
 
             // Material stats - used for both charts
