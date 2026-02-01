@@ -415,9 +415,9 @@
                     <div class="kpi-subtext">Scale: 18-100</div>
                 </div>
                 <div class="kpi-card">
-                    <div class="kpi-label">Pipes 70+ Years</div>
+                    <div class="kpi-label">Average Pipe Age</div>
                     <div class="kpi-value" id="kpi-old">-</div>
-                    <div class="kpi-subtext">Highest risk age group</div>
+                    <div class="kpi-subtext" id="kpi-old-subtext">Scale: - years</div>
                 </div>
             </div>
 
@@ -656,19 +656,140 @@
                 </div>
             </div>
 
+            <!-- Model Performance -->
+            <div class="card">
+                <h3 style="color: #1e3c72; margin-bottom: 15px;">Model Performance</h3>
+                <p style="line-height: 1.6; margin-bottom: 20px;">
+                    We validated the model by analyzing risk scores at the time pipes actually failed.
+                    If the model works well, most failures should occur in High/Critical risk categories.
+                </p>
+
+                <h4 style="color: #1e3c72; margin-top: 20px; margin-bottom: 10px;">Failure Distribution by Risk Category</h4>
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+                        <thead>
+                            <tr style="background-color: #f8f9fa;">
+                                <th style="padding: 12px; text-align: left; border-bottom: 2px solid #dee2e6;">Risk Category</th>
+                                <th style="padding: 12px; text-align: center; border-bottom: 2px solid #dee2e6;">% of Failures</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 10px; border-bottom: 1px solid #dee2e6;"><span style="color: #dc3545; font-weight: bold;">●</span> Critical (80-100)</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6; font-weight: bold;">20.8%</td>
+                            </tr>
+                            <tr style="background-color: #f8f9fa;">
+                                <td style="padding: 10px; border-bottom: 1px solid #dee2e6;"><span style="color: #fd7e14; font-weight: bold;">●</span> High (60-80)</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6; font-weight: bold;">27.6%</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; border-bottom: 1px solid #dee2e6;"><span style="color: #ffc107; font-weight: bold;">●</span> Medium (40-60)</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6; font-weight: bold;">36.2%</td>
+                            </tr>
+                            <tr style="background-color: #f8f9fa;">
+                                <td style="padding: 10px; border-bottom: 1px solid #dee2e6;"><span style="color: #28a745; font-weight: bold;">●</span> Low (18-40)</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6; font-weight: bold;">15.4%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4 style="color: #1e3c72; margin-top: 20px; margin-bottom: 10px;">Material Performance</h4>
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr style="background-color: #f8f9fa;">
+                                <th style="padding: 12px; text-align: left; border-bottom: 2px solid #dee2e6;">Material</th>
+                                <th style="padding: 12px; text-align: center; border-bottom: 2px solid #dee2e6;">Failures</th>
+                                <th style="padding: 12px; text-align: center; border-bottom: 2px solid #dee2e6;">Avg Risk Score</th>
+                                <th style="padding: 12px; text-align: center; border-bottom: 2px solid #dee2e6;">Avg Age (years)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 10px; border-bottom: 1px solid #dee2e6;">Vitrified Clay</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;">2,907</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6; font-weight: bold; color: #fd7e14;">60.4</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;">68.5</td>
+                            </tr>
+                            <tr style="background-color: #f8f9fa;">
+                                <td style="padding: 10px; border-bottom: 1px solid #dee2e6;">Concrete</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;">289</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6; font-weight: bold; color: #dc3545;">79.0</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;">85.3</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; border-bottom: 1px solid #dee2e6;">Cast Iron</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;">75</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6; font-weight: bold; color: #ffc107;">56.7</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;">49.6</td>
+                            </tr>
+                            <tr style="background-color: #f8f9fa;">
+                                <td style="padding: 10px; border-bottom: 1px solid #dee2e6;">HDPE</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;">60</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6; font-weight: bold; color: #28a745;">30.6</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;">31.8</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; border-bottom: 1px solid #dee2e6;">Reinforced Concrete</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;">52</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6; font-weight: bold; color: #ffc107;">50.3</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;">47.6</td>
+                            </tr>
+                            <tr style="background-color: #f8f9fa;">
+                                <td style="padding: 10px; border-bottom: 1px solid #dee2e6;">PVC</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;">48</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6; font-weight: bold; color: #28a745;">27.5</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;">28.3</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; border-bottom: 1px solid #dee2e6;">Unknown</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;">24</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6; font-weight: bold; color: #ffc107;">42.9</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;">41.6</td>
+                            </tr>
+                            <tr style="background-color: #f8f9fa;">
+                                <td style="padding: 10px; border-bottom: 1px solid #dee2e6;">Ductile Iron</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;">20</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6; font-weight: bold; color: #28a745;">28.1</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;">29.8</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 10px; border-bottom: 1px solid #dee2e6;">Steel</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;">19</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6; font-weight: bold; color: #ffc107;">41.2</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;">37.3</td>
+                            </tr>
+                            <tr style="background-color: #f8f9fa;">
+                                <td style="padding: 10px; border-bottom: 1px solid #dee2e6;">Asbestos Cement</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;">11</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6; font-weight: bold; color: #ffc107;">45.8</td>
+                                <td style="padding: 10px; text-align: center; border-bottom: 1px solid #dee2e6;">54.9</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p style="line-height: 1.6; margin-top: 20px; padding: 15px; background-color: #e8f4f8; border-left: 4px solid #1e3c72; border-radius: 4px;">
+                    <strong>Assessment:</strong> This analysis shows the distribution of risk scores among failed pipes. The model identifies 48% of failures
+                    as High/Critical risk, providing a framework for prioritizing preventive maintenance. Since all pipes in the dataset experienced failures,
+                    the model helps identify higher-risk candidates for inspection and replacement, though failures can occur across all risk categories.
+                </p>
+            </div>
+
             <!-- Research Foundation -->
             <div class="card">
                 <h3 style="color: #1e3c72; margin-bottom: 15px;">Research Foundation</h3>
                 <p style="line-height: 1.6; margin-bottom: 10px;">
-                    <strong><a href="https://doi.org/10.1061/(ASCE)IS.1943-555X.0000680" target="_blank" style="color: #1e3c72;">Dallas Study (Atambo 2022)</a>:</strong> MLR + ANN models, 75-85% accuracy.
+                    <strong><a href="https://doi.org/10.3390/su14095549" target="_blank" style="color: #1e3c72;">Dallas Study (Atambo 2022)</a>:</strong> MLR + ANN models, 75-85% accuracy.
                     Age showed 100% normalized importance vs. 25% for material (4:1 ratio).
                 </p>
                 <p style="line-height: 1.6; margin-bottom: 10px;">
-                    <strong><a href="https://doi.org/10.3390/w16010056" target="_blank" style="color: #1e3c72;">Isfahan Study (Goodarzi 2024)</a>:</strong> SVM model, 84-86% accuracy.
+                    <strong><a href="https://doi.org/10.2166/wh.2024.249" target="_blank" style="color: #1e3c72;">Isfahan Study (Goodarzi 2024)</a>:</strong> SVM model, 84-86% accuracy.
                     Documented exponential failure curve with dramatic increase after 40 years.
                 </p>
                 <p style="line-height: 1.6;">
-                    <strong><a href="Research Papers/Research_Findings.md" target="_blank" style="color: #1e3c72;">Oakland Info360 Asset Validation</a>:</strong> Commercial system under EPA Consent Decree confirms
+                    <strong><a href="https://www.autodesk.com/autodesk-university/class/Risks-and-Rehabilitation-of-Sewer-Assets-with-Info360-Asset-2023" target="_blank" style="color: #1e3c72;">Oakland Info360 Asset Validation</a>:</strong> Commercial system under EPA Consent Decree confirms
                     "If no CCTV, use Age" as primary structural failure predictor.
                 </p>
             </div>
@@ -742,12 +863,15 @@
             const total = allData.length;
             const highCritical = allData.filter(d => d.risk_category === 'High' || d.risk_category === 'Critical').length;
             const avgRisk = (allData.reduce((sum, d) => sum + d.risk_score, 0) / total).toFixed(1);
-            const old = allData.filter(d => d.pipe_age_years >= 70).length;
+            const avgAge = (allData.reduce((sum, d) => sum + d.pipe_age_years, 0) / total).toFixed(0);
+            const minAge = Math.min(...allData.map(d => d.pipe_age_years));
+            const maxAge = Math.max(...allData.map(d => d.pipe_age_years));
 
             document.getElementById('kpi-total').textContent = total.toLocaleString();
             document.getElementById('kpi-high').textContent = ((highCritical / total) * 100).toFixed(0) + '%';
             document.getElementById('kpi-avg').textContent = avgRisk;
-            document.getElementById('kpi-old').textContent = ((old / total) * 100).toFixed(0) + '%';
+            document.getElementById('kpi-old').textContent = avgAge;
+            document.getElementById('kpi-old-subtext').textContent = `Scale: ${minAge}-${maxAge} years`;
         }
 
         function createCharts() {
@@ -759,12 +883,13 @@
 
             // Define order: Critical to Low (top to bottom in legend)
             const categoryOrder = ['Critical', 'High', 'Medium', 'Low'];
+            const categoryLabels = ['Critical (81-100)', 'High (61-80)', 'Medium (41-60)', 'Low (18-40)'];
             const orderedValues = categoryOrder.map(cat => categoryCounts[cat] || 0);
             const orderedColors = categoryOrder.map(cat => riskColors[cat]);
 
             const donutData = [{
                 values: orderedValues,
-                labels: categoryOrder,
+                labels: categoryLabels,
                 type: 'pie',
                 hole: 0.4,
                 marker: {
