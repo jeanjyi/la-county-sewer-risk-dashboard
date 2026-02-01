@@ -1,0 +1,46 @@
+{
+  "total_records": 7020,
+  "records_scored": 3512,
+  "records_missing_age_or_material": 3508,
+  "methodology": "80% Age / 20% Material weighted scoring",
+  "correlations": {
+    "risk_vs_volume": -0.0068,
+    "risk_vs_water": null
+  },
+  "avg_risk_by_material": {
+    "Brick": 86.04,
+    "Concrete": 79.0,
+    "VCP": 60.41,
+    "Cast Iron": 56.7,
+    "Concrete (Reinforced)": 50.33,
+    "Asbestos Cement": 45.78,
+    "Unknown": 43.63,
+    "Steel": 41.9,
+    "Fiberglass": 37.49,
+    "HDPE": 30.79,
+    "Ductile Iron": 28.07,
+    "PVC": 27.51,
+    "Bluebell": 27.01,
+    "metal": 27.01,
+    "HPDE": 26.29
+  },
+  "avg_risk_by_age_band": {
+    "0-30": 28.08,
+    "31-50": 41.06,
+    "51-70": 52.46,
+    "71-90": 71.59,
+    "90+": 86.84
+  },
+  "avg_risk_by_cause": {
+    "Debris-General; Debris-Rags": 90.0,
+    "Collection System Maintenance Failure (specify below)": 90.0,
+    "Flow exceeded capacity (Seperate CS Only)": 90.0,
+    "Collection System Maintenance Failure (specify below); Damage by Others Not Related to Collection System Construction/Maintenance; Debris-Rags": 88.85,
+    "Collection System Maintenance Failure (specify below); Debris-Rags; Fats, Oil and Grease (FOG); Root Intrusion": 87.71,
+    "Debris-General; Debris-Rags; Debris-wipes/Non-disposables; Fats, Oil and Grease (FOG)": 84.36,
+    "Debris-wipes/Non-disposables; Fats, Oil and Grease (FOG); Root Intrusion": 80.77,
+    "Rainfall exceeded design (Separate CS Only)": 75.76,
+    "Flow exceeded capacity (Separate CS Only)": 73.77,
+    "Operator Error (specify below)": 73.53
+  }
+}
